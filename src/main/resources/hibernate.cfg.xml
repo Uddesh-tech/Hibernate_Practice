@@ -22,8 +22,9 @@
 		<property name="show_sql">true</property>
 
 		<!-- Mapping -->
-		<mapping class="com.Maven.Hibernate_Practice.Question" />
-		<mapping class="com.Maven.Hibernate_Practice.Answer" />
+		
+		<mapping class="com.Maven.Hibernate_Practice.Question_new" />
+		<mapping class="com.Maven.Hibernate_Practice.Answer_new" />
 		
 	</session-factory>
 </hibernate-configuration>

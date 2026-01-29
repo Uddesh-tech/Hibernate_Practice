@@ -16,6 +16,8 @@ public class App {
 		// Step 2: Build SessionFactory
 		SessionFactory sf = cfg.buildSessionFactory();
 
+		/* One to One Mapping */
+		
 		// Step 3 : creating question
 		Question q1 = new Question();
 		q1.setQ_id(101);
