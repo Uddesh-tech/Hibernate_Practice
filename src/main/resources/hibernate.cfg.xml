@@ -23,5 +23,7 @@
 
 		<!-- Mapping -->
 		<mapping class="com.Maven.Hibernate_Practice.Question" />
+		<mapping class="com.Maven.Hibernate_Practice.Answer" />
+		
 	</session-factory>
 </hibernate-configuration>

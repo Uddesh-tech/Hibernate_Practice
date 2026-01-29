@@ -1,9 +1,10 @@
 package com.Maven.Hibernate_Practice;
 
+import javax.transaction.Transaction;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-
 
 public class App {
 	public static void main(String[] args) {
@@ -11,22 +12,32 @@ public class App {
 		// Step 1: Load configuration
 		Configuration cfg = new Configuration();
 		cfg.configure("hibernate.cfg.xml");
+
+		// Step 2: Build SessionFactory
+		SessionFactory sf = cfg.buildSessionFactory();
+
+		// Step 3 : creating question
+		Question q1 = new Question();
+		q1.setQ_id(101);
+		q1.setQ_name("What is Java");
+
+		// creating answer
+		Answer ans = new Answer();
+		ans.setAns_id(111);
+		ans.setAnswer("Java is Programming lang");
+
+		Session s = sf.openSession();
+		org.hibernate.Transaction tx=(org.hibernate.Transaction) s.beginTransaction();
 		
-		 // Step 2: Build SessionFactory
-		SessionFactory sf=cfg.buildSessionFactory();
+		q1.setAnswer(ans);
 		
-		// Step 3: Open session
-		Session session=sf.openSession();
-		session.beginTransaction();
-		
-		//Step 4: save object
-		Question q=new Question(101,"What is Java");
-		session.save(q);
-		
-		//step 5:commit
-		session.getTransaction().commit();
-		session.close();
-		sf.close();
+		s.save(q1);
+		s.save(ans);
+
+		tx.commit();
+
+		s.close();
+
 		System.out.println("Record inserted sussessfully...");
 
 	}
