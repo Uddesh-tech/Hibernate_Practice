@@ -23,8 +23,8 @@
 
 		<!-- Mapping -->
 		
-		<mapping class="com.Maven.Hibernate_Practice.Employee" />
 		<mapping class="com.Maven.Hibernate_Practice.Project" />
+		<mapping class="com.Maven.Hibernate_Practice.Employee" />
 		
 	</session-factory>
 </hibernate-configuration>
