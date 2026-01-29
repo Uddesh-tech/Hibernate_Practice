@@ -30,7 +30,7 @@ public class App_1 {
 		Answer_new answer = new Answer_new();
 		answer.setAns_id(11);
 		answer.setAnswer("Java is Programming lang");
-		answer.setAns_id(null);
+		
 
 		Answer_new answer1 = new Answer_new();
 		answer1.setAns_id(12);

@@ -23,8 +23,8 @@
 
 		<!-- Mapping -->
 		
-		<mapping class="com.Maven.Hibernate_Practice.Question_new" />
-		<mapping class="com.Maven.Hibernate_Practice.Answer_new" />
+		<mapping class="com.Maven.Hibernate_Practice.Employee" />
+		<mapping class="com.Maven.Hibernate_Practice.Project" />
 		
 	</session-factory>
 </hibernate-configuration>
